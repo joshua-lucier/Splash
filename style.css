@@ -58,3 +58,32 @@ a {
 	font-weight: bold;
 
 }
+
+@media only screen and (max-device-width: 480px)
+{
+	body {
+		font-size: 2vw;
+	}
+
+	h1 {
+		font-size: 3vw;
+	}
+
+	h2 {
+		font-size: 2.5vw;
+	}
+
+	h3 {
+		font-size: 2vw;
+	}
+
+	article {
+		width: 85vw;
+
+	}
+
+	body > header > address {
+		width: 85vw;
+	}
+
+}
