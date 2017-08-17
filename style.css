@@ -161,7 +161,7 @@ h3 {
 
 }
 
-@media only screen and (max-device-width: 480px)
+@media only screen and (max-device-width: 730px)
 {
 	body {
 		font-size: 4vw;
@@ -178,6 +178,7 @@ h3 {
 
 	h3 {
 		font-size: 4vw;
+		width: 33vw;
 	}
 
 	h4 {
@@ -189,13 +190,53 @@ h3 {
 
 	}
 
-	body > header > address {
+	body > header {
 		width: 85vw;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #7788aa;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding: 1vw;
+	}
+
+	body > header > address {
+		width: 65vw;
+	}
+
+	body > header > nav ul {
+		padding: 0;
+		width: 84.5vw;
+		margin-right: auto;
+		margin-left: auto;
 	}
 
 	body > header > nav li {
 		padding-top: 2vw;
 		padding-bottom: 2vw;
+	}
+	#avatar {
+		position: relative;
+		float: left;
+		right: auto;
+		margin-left: auto;
+		margin-right: auto;
+		height: 20vw;
+		left: 10vw;
+		top: 0;
+	}
+
+	#slogan {
+		clear: left;
+		position:relative;
+		transform: none;
+		top: 0;
+		right: 0;
+		left: 0;
+		height: 8vw;
+		width: 100%;
+		text-align: center;
+		margin: -1vw;
 	}
 
 }
