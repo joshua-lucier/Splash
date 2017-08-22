@@ -8,65 +8,143 @@
     <meta name="keywords" content="Joshua, Lucier, Computer Guy, Windows, Mac, OSX, IOS, Android, Tablet, PC, Laptop, Computer, Tablet, Phone, Mobile, Network, Repair, technician, tech, technology, Upgrade, Optimization, Antivirus, Recovery, Backup, Systems, Morrisville, Morristown, Stowe, VT, Eden, Hardwick, Wolcott, Hyde Park, Waterbury, Jeffersonville, Johnson">
     <title>The Computer Guy</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-3.2.1.min.js"></script>
   </head>
   <body>
-  <div id="backing">
-  </div>
-  <header>
-  <img id="avatar" src="painting.jpg">
-  <div id="slogan">
-  <h4>Need harmony with your technology?</h4>
-  <h4>Tune your tech to the music of your life.</h4>
-  </div>
-  <address>
-  <h1>Joshua Lucier</h1>
-  <h2>Computer Guy</h2>
-  <h4>Serving Central VT and based out of Morrisville, VT</h4>
-  <h3><a href="tel:8025786266">(802) 578-6266</a></h3>
-  <h4><a href="mailto:Joshua.Lucier@gmail.com">Joshua.Lucier@gmail.com</a></h4>
-  </address>
-  <nav>
-  <ul>
-  <a href="#What"><li>What I Do</li></a>
-  <a href="#How"><li>How Much</li></a>
-  <a href="#Experience"><li>Experience</li></a>
-  </ul>
-  </nav>
-  </header>
-  <article>
-  <img id="crew" src="crew.png">
-  <a id="What"><header><h3>What I Do</h3></header></a>
-  <p>
-    I am a generalist in the computing field.  I can help with PC's, Macs, and mobile devices.  I can do everything from helping you set up your email to programming a custom business application.  I do hardware maintenance and upgrades on desktop PC’s and laptops, but not on mobile devices.  I can also do custom built computers for gaming or other uses.  I mainly serve the central Vermont area and am focused around Morrisville and Stowe.  I do not carry an inventory.  Any parts that must be replaced or upgraded, I will work with you to purchase.  I also do not have a shop.  While I do work on hardware and development out of my home, my other work is done at the customer’s place of residence, business or at a location where we can meet.  Some things you may want to have me look at are:
-  </p>
-  <ul>
-    <li><span class="title">Malware recovery and repair:</span> Clean up the mess after a nasty virus or worm.</li>
-    <li><span class="title">System Backup Setup:</span> Keep your data from being lost in the event of a disaster.  Backup your data.</li>
-    <li><span class="title">Operating system updates and repair:</span> Make sure your operating system is working smoothly.</li>
-    <li><span class="title">Web filter Solutions:</span> Keep your children safe from inappropriate content on the web.</li>
-    <li><span class="title">Antivirus Solutions:</span> Keep your computer secure from malware and hackers.</li>
-    <li><span class="title">Tune-up software solutions:</span> Optimize your PC with the best tune-up software available.</li>
-    <li><span class="title">Hardware Upgrades and Repair:</span>  PC slow?  A RAM or Hard drive upgrade may be what you need.</li>
-    <li><span class="title">Software troubleshooting:</span> Need help getting software up and running?</li>
-    <li><span class="title">Internet troubleshooting:</span> Internet Slow?  The ISP can make mistakes.</li>
-    <li><span class="title">Network setup</span></li>
-    <li><span class="title">Home entertainment network & device setup</span></li>
-  </ul>
-  </article>
+    <div id="fb-root"></div>
+    <script>
+      $(document).ready(function() {
+        if ($(window).scrollTop() > $('header').height() && !($(window).scrollTop() > ($(document).height() - ($(window).height() + $('footer').height())))) {
+          $('nav').addClass('navbar-fixed');
+          $('nav').removeClass('navbar-fixed-top');
+        }
+        //at the very top of the page
+        if ($(window).scrollTop() <= $('header').height()) {
+          $('nav').removeClass('navbar-fixed');
+          $('nav').removeClass('nav-bar-fixed-top');
+        }
+        //at the very bottom of the page
+        if($(window).scrollTop() > ($(document).height() - ($(window).height() + $('footer').height()))){
+          $('nav').removeClass('navbar-fixed');
+          $('nav').addClass('navbar-fixed-top');
+        }
+        $(window).scroll(function () {
+            //if you hard code, then use console
+            //.log to determine when you want the 
+            //nav bar to stick.  
+          //scrolled in the page
+          if ($(window).scrollTop() > $('header').height() && !($(window).scrollTop() > ($(document).height() - ($(window).height() + $('footer').height())))) {
+            $('nav').addClass('navbar-fixed');
+            $('nav').removeClass('navbar-fixed-top');
+          }
+          //at the very top of the page
+          if ($(window).scrollTop() <= $('header').height()) {
+            $('nav').removeClass('navbar-fixed');
+            $('nav').removeClass('nav-bar-fixed-top');
+          }
+          //at the very bottom of the page
+          if($(window).scrollTop() > ($(document).height() - ($(window).height() + $('footer').height()))){
+            $('nav').removeClass('navbar-fixed');
+            $('nav').addClass('navbar-fixed-top');
+          }
+        });
+      });
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.async=true;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div id="backing">
+    </div>
+    <header>
+    <a id="top"><img id="avatar" src="painting.jpg"></a>
+    <div id="slogan">
+    <h4>Need harmony with your technology?</h4>
+    <h4>Tune your tech to the music of your life.</h4>
+    </div>
+    <address>
+    <h1>Joshua Lucier</h1>
+    <h2>Computer Guy</h2>
+    <h4>Serving Central VT and based out of Morrisville, VT</h4>
+    <h3><a href="tel:8025786266">(802) 578-6266</a></h3>
+    <h4><a href="mailto:Joshua.Lucier@gmail.com">Joshua.Lucier@gmail.com</a></h4>
+    </address>
+    <nav>
+    <ul>
+    <a href="#Top"><li>Top</li></a>
+    <a href="#What"><li>What I Do</li></a>
+    <a href="#How"><li>How Much</li></a>
+    </ul> 
+    <ul>
+    <a href="#Experience"><li>Experience</li></a>
+    <a href="#Testamonials"><li>Testamonials</li></a>
+    </ul>
+    </nav>
+    </header>
+    <article>
+    <img id="crew" src="crew.png">
+    <a id="What"><header><h3>What I Do</h3></header></a>
+    <p>
+      I am a generalist in the computing field.  I can help with PC's, Macs, and mobile devices.  I can do everything from helping you set up your email to programming a custom business application.  I do hardware maintenance and upgrades on desktop PC’s and laptops, but not on mobile devices.  I can also do custom built computers for gaming or other uses.  I mainly serve the central Vermont area and am focused around Morrisville and Stowe.  I do not carry an inventory.  Any parts that must be replaced or upgraded, I will work with you to purchase.  I also do not have a shop.  While I do work on hardware and development out of my home, my other work is done at the customer’s place of residence, business or at a location where we can meet.  Some things you may want to have me look at are:
+    </p>
+    <ul>
+      <li><span class="title">Malware recovery and repair:</span> Clean up the mess after a nasty virus or worm.</li>
+      <li><span class="title">System Backup Setup:</span> Keep your data from being lost in the event of a disaster.  Backup your data.</li>
+      <li><span class="title">Operating system updates and repair:</span> Make sure your operating system is working smoothly.</li>
+      <li><span class="title">Web filter Solutions:</span> Keep your children safe from inappropriate content on the web.</li>
+      <li><span class="title">Antivirus Solutions:</span> Keep your computer secure from malware and hackers.</li>
+      <li><span class="title">Tune-up software solutions:</span> Optimize your PC with the best tune-up software available.</li>
+      <li><span class="title">Hardware Upgrades and Repair:</span>  PC slow?  A RAM or Hard drive upgrade may be what you need.</li>
+      <li><span class="title">Software troubleshooting:</span> Need help getting software up and running?</li>
+      <li><span class="title">Internet troubleshooting:</span> Internet Slow?  The ISP can make mistakes.</li>
+      <li><span class="title">Network setup</span></li>
+      <li><span class="title">Home entertainment network & device setup</span></li>
+    </ul>
+    </article>
 
-  <article>
-  <img id="car" src="car.png">
-  <a id="How"><header><h3>How much It Is</h3></header></a>
-  <p>I’m currently charging $30.00 per hour but I offer a sliding scale fee.  If you are on a limited budget, I can work with you.  I also offer free first consultations.  If you are outside of the Morristown area, there may be a travel fee.  This small fee helps me keep up my car and pay for gas.</p>
-  </article>
+    <article>
+    <img id="car" src="car.png">
+    <a id="How"><header><h3>How much It Is</h3></header></a>
+    <p>I’m currently charging $30.00 per hour but I offer a sliding scale fee.  If you are on a limited budget, I can work with you.  I also offer free first consultations.  If you are outside of the Morristown area, there may be a travel fee.  This small fee helps me keep up my car and pay for gas.</p>
+    </article>
 
-  <article>
-  <img id="linux" src="linux.png">
-  <a id="Experience"><header><h3>My Experience</h3></header></a>
-  <p>
-  My experience comes from several directions.  In the US Marines, I was trained on Microsoft and Cisco systems and worked on DOD networks.  I was responsible for everything from PC repair to configuring network routers and switches.  I was also certified on Microsoft systems at this point.  On leaving the Marines, I worked as a network consultant and a network administrator with local VT companies.  There I learned a wide range of systems including Sonicwall, Citrix, Linux, HP and more.  I then decided to use my GI bill and, with the help of the VA, started going to college for computer science.  There, I received a lot of training in computer programming and web programming.  In total, I have been in computing for around 13 years.
-  </p>
-  </article>
+    <article>
+    <img id="linux" src="linux.png">
+    <a id="Experience"><header><h3>My Experience</h3></header></a>
+    <p>
+    My experience comes from several directions.  In the US Marines, I was trained on Microsoft and Cisco systems and worked on DOD networks.  I was responsible for everything from PC repair to configuring network routers and switches.  I was also certified on Microsoft systems at this point.  On leaving the Marines, I worked as a network consultant and a network administrator with local VT companies.  There I learned a wide range of systems including Sonicwall, Citrix, Linux, HP and more.  I then decided to use my GI bill and, with the help of the VA, started going to college for computer science.  There, I received a lot of training in computer programming and web programming.  In total, I have been in computing for around 13 years.
+    </p>
+    </article>
+
+    <article>
+    <a id="Testamonials"><header><h3>Projects and Testamonials</h3></header></a>
+    <ul>
+    <li><a href="http://www.stowebarbershop.com/">Stowe Barber Shop</a></li>
+    <li><a href="http://www.kirbyelectricvt.com/">Kirby Electric of Vermont</a></li>
+    </ul>
+    <p><em>"This guy, Joshua Lucier...he is a WHIZ with computers...can do almost anything...he just reformatted the Stowe Barber Shop website...I didn't even know who my server was or any usernames or passcode or anything...contact Josh if you need any help...802-578-6266."</em> -Regina Crosby, Owner of the Stowe Barber Shop</p>
+    <p><em>"We have worked quite a bit with Josh Lucier and have found him to be a great resource. On-site tech support, web programming, technology consulting - we've used him for all. His fees are reasonable, too. "</em>-Karin Gottlieb</p>
+    </article>
+
+    <footer>
+    <header><h4>Contact Me By Email or Facebook</h4></header>
+    <div class="links">
+    <h5>Recommmended Links</h5>
+      <ul>
+        <li><a href="http://www.sabonart.com/">Artist Jack Sabon, B.A.</a></li>
+        <li><a href="http://www.stowebarbershop.com/">Stowe Barber Shop</a></li>
+        <li><a href="http://www.gracemoscow.com">Grace Bible Church</a></li>
+      </ul>
+    </div>
+    <a href="mailto:joshua.lucier@gmail.com"><img class="email-icon" src="email.png"/></a>
+    <a href="https://www.facebook.com/computerguyvt/"><img class="email-icon" src="facebook.png"></a>
+    <span class="fb-like" data-href="https://www.facebook.com/computerguyvt/" data-width="512" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></span>
+
+    </footer>
   </body>
 </html>
 
